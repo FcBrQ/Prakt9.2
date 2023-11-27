@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Prakt9._2.MainPage">
+
+    <TableView>
+    <TableRoot>
+        <TableSection Title="Персональные данные">
+            <EntryCell x:Name="Surname" Label="Фамилия" Placeholder="Введите Фамилию"></EntryCell>
+            <EntryCell x:Name="Name" Label="Имя" Placeholder="Введите Имя"></EntryCell>
+            <EntryCell x:Name="Secondname" Label="Отчество" Placeholder="Введите Отчество"></EntryCell>
+            <ViewCell>
+                <StackLayout Orientation="Horizontal" Margin="15,0,15,0">
+                    <Label Text="Выберите дату рождения"></Label>
+                    <DatePicker x:Name="BornDP" Margin="15,0,15,0" DateSelected="BornDP_DateSelected"></DatePicker>
+                </StackLayout>
+            </ViewCell>
+            <ViewCell>
+                <StackLayout Orientation="Horizontal" Margin="15,0,15,0">
+                    <Label Text="Пол" VerticalOptions="Center" Margin="15,0,15,0"></Label>
+                    <Picker x:Name="Gender" Title="Выберите пол">
+                        <Picker.Items>
+                            <x:String>Мужской</x:String>
+                            <x:String>Женский</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+            </ViewCell>
+            <ViewCell>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Добавить фото" Margin="15,0,15,0"></Label>
+                    <Button Text="Выбрать фото" Clicked="Button_Clicked_1"></Button>
+                    <Image x:Name="ImageView"></Image>
+                </StackLayout>
+            </ViewCell>
+            <ViewCell>
+                <StackLayout>
+                    <Picker x:Name="Obchez" Margin="15,0,15,0" Title="Нужно ли общежитие ?">
+                        <Picker.Items>
+                            <x:String>Да</x:String>
+                            <x:String>Нет</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+            </ViewCell>
+            <ViewCell>
+                <StackLayout>
+                    <Picker x:Name="Starosta" Margin="15,0,15,0" Title="Являетесь ли вы старостой ?">
+                        <Picker.Items>
+                            <x:String>Да</x:String>
+                            <x:String>Нет</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+            </ViewCell>
+            <ViewCell>
+                <StackLayout>
+                        <Picker x:Name="MidBal" Margin="15,0,15,0" Title="Ваш средний бал по предметам">
+                            <Picker.Items>
+                                <x:String>5</x:String>
+                                <x:String>4</x:String>
+                                <x:String>3</x:String>
+                                <x:String>2</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+            </ViewCell>
+                <ViewCell>
+                    <StackLayout>
+                        <Button Text="Сохранить" Clicked="Button_Clicked_2"></Button>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout>
+                        <Button Text="Отменить сохранение"></Button>
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+
+    </TableRoot>
+</TableView>
+
+</ContentPage>
